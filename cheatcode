@@ -1,0 +1,41 @@
+Python commands for Flask:
+
+# To create a python file using command or via terminal
+1 - pip freeze > filename
+
+# To create a requirments.txt file
+2 - package_name == version_name
+	Example :Flask==3.0.0
+			 Flask-JSON==0.4.0
+
+# To install all necessory packeges of python from requirments.txt
+3 - pip install requirments.txt
+
+# To create a file with all python packages list
+4 - pip freeze > help.py
+
+# To return a data in json format from flask- write like below code
+5 - return jsonify({"data" : "Result displays here."})
+
+# To communicate with database inside flask domain
+6 - Use pip install Flask-SQLAlchemy
+
+	# configure SQLAlchemy for database
+	# Note 1 : If you are using SQL database you can "use sql uri" and so on for other databases... 
+		     : Here I am using MySQL database so I am using mysql_uri	
+	# Note 2 : "pip install mysqlclient" or	"pip install pymysql"	   
+	  SYNTAX : 	app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://username:password@localhost/db_name'
+				# Flask code : app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:''@localhost/flask'
+				# This line is also necessory other wise you will get warning
+				app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+# creating class for creating table inside database
+7 - class Articles(db.Model):
+	    id = db.Column(db.Ineger, primary_key=True)
+	    title = db.Column(db.String(200))
+	    body = db.Column(db.Text())
+	    date = db.column(db.DateTime, default=datetime.datetime.now)
+
+	    def __init__(self, title, body):
+	        self.title = title
+	        self.body = body

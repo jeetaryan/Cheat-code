@@ -1,0 +1,51 @@
+# To work with Github using GitBash
+
+Note : There are 2 ways to work with Github and Gitbash
+	1- Clone the remote repo.
+	2- Start with Gitbash.
+
+
+1- Work with Clone the remote repo.
+
+	Note: This is to pull the project from Github.
+	
+	1- create a remote repo in your Github account
+	2- copy the https url ("https://github.com/jeetElgoss/LocalRepo.git")
+	3- open your Gitbash
+	4- Select your Directory/Folder where you want to clone your repo
+	5- git pull ("enter here your copied github repo https url") and press enter
+
+	Note : This is to push your code to remote.
+
+	1- git status ("To check the status of the project")
+	2- git add "file name" ("If you want to add add file manually")
+			OR
+	   git add . (" '.''  Dot will help you to add all modified and untracked file for staging")
+	3- git commit -m "enter a message here"
+	4- git push origin main ("It will push your code on your remote repo")   		
+
+2- Work with Gitbash.
+
+	1- create a repo on github
+	2- open your gitbash and map your working directory
+	3- git init
+	4- git add .
+	5- git commit -m "enter your commit message"
+	6- Now set your map with remote repo-
+	    git remote add origin "enter here remote repo https url/link"
+	7- git branch ("It is used to check branch")
+	   Note: if you find master brach then you need to rename that branch name
+	8- To rename branch:
+	   rename branch -M main
+	9- git push -u origin main
+	   Note: "-u" helps in removing "origin main" from the command. "only you need to type git push" 	   	    	 
+
+3- To push a code with branch:
+	1- git push --set-upstream origin "branch name"
+	
+Note:
+	1- git checkout -b "New branch name". ("To create new branch")
+	2- git checkout "branch name". ("To change branch")
+	3- git branch -d "branch name". ("To delete branch")
+	4- git branch -M "branch name". (To rename a branch which currently selected)	
+ 
