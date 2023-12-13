@@ -4,6 +4,10 @@ Note : There are 2 ways to work with Github and Gitbash
 	1- Clone the remote repo.
 	2- Start with Gitbash.
 
+Note : set GLobal configuration-
+		git config --global user.name "github account username"
+		git config --global user.email "github account email"
+
 
 1- Work with Clone the remote repo.
 
