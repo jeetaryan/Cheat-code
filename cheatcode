@@ -9,12 +9,12 @@ Python commands for Flask:
 			 Flask-JSON==0.4.0
 
 # To install all necessory packeges of python from requirments.txt
-3 - pip install requirments.txt
+3 - pip install -r requirments.txt
 
 # To create a file with all python packages list
 4 - pip freeze > help.py
 
-# To return a data in json format from flask- write like below code
+# To return a data in json format from flask, write like below code
 5 - return jsonify({"data" : "Result displays here."})
 
 # To communicate with database inside flask domain
@@ -24,8 +24,8 @@ Python commands for Flask:
 	# Note 1 : If you are using SQL database you can "use sql uri" and so on for other databases... 
 		     : Here I am using MySQL database so I am using mysql_uri	
 	# Note 2 : "pip install mysqlclient" or	"pip install pymysql"	   
-	  SYNTAX : 	app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://username:password@localhost/db_name'
-				# Flask code : app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:''@localhost/flask'
+	  SYNTAX : 	app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://username:password@localhost/db_name'
+				# Flask code : app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql+pymysql://root:''@localhost/flask'
 				# This line is also necessory other wise you will get warning
 				app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
