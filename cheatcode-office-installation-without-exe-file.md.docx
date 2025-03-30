@@ -1,0 +1,14 @@
+1-- install office setup...
+	Create new folder in C deive named Office
+	Google ---
+a- Office Deployment Tool
+	Note-- Download officedeploymenttool_18526-20146.exe
+	install this .exe into Office folder.
+b- office customization tool
+	Note-- Setup all necessory language and packages of office
+	it creates a "Configuration.xml"
+	paste into Office folder and remove already existing .xml file
+c- open cmd as administrator and open cd c/Office
+	run command--
+	setup /configure configuration.xml
+	THIs WILL INSTALL ALL OFFICE PACKAGES..........
